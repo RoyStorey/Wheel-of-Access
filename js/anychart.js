@@ -122,7 +122,7 @@ let avionicsbus = aircraftnetwork.avionicsbus;
   // adjustfontsize is default, causes you to not be able to resize font
   chart.labels().adjustFontSize(false);
   chart.labels().wordWrap('break-word');
-  chart.level().labels().fontSize(15);
+  chart.level().labels().fontSize('90%');
   chart.labels().padding(0);
   // makes circle in middle of chart for plane me to put plane into chart.
   chart.innerRadius(95);

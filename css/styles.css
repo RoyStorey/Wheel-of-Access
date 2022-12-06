@@ -4,25 +4,41 @@ body {
     margin: 0px;
     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-.chartHolder {
-    height: 100vh;
-    width: 100%;
+.pageContainer{
+    /* height: 100vh; */
+    /* width: 100%; */
     display: flex;
     flex-direction: row;
     color:white;
     justify-content:space-around;
+    /* background-color:rgb(0, 61, 61); */
 }
-.chartHolder h1{
-    color:rgb(158, 255, 187)
+.pageContainer h1,h2{
+    color:rgb(158, 255, 187);
+    font-weight:300;
 }
-
+.chartContainer{
+    height:100vh;
+    width:50%;
+}
 .chartTwo {
-    height: 100%;
-    width: 50%;
+    height: 90%;
+    width: 100%;
     /* background-color: rgb(0, 61, 53); */
-
 }
-
+.legendContainer{
+    /* background-color:orange; */
+    width:100%;
+    height:5vh;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+    align-items:center;
+}
+.legendContainer h5{
+    margin:0px;
+    padding:0px;
+}
 .descriptionContainer{
     width:50%;
     /* background-color:gray; */
@@ -39,6 +55,37 @@ body {
     display:flex;
     flex-direction:column;
 }
+.rowize{
+    display:flex;
+    flex-direction:row;
+    /* justify-content: space-between; */
+}
 .padding{
     padding:1rem;
+}
+.bold{
+    font-weight:500;
+}
+.underline{
+    text-decoration: underline;
+}
+.legendColorContainer{
+    border-width:1px;
+    border-color:white;
+    border-radius:2px;
+    border-style:solid;
+    height:15px;
+    width:15px;
+}
+.redBackground{
+background-color:#790000;
+}
+.yellowBackground{
+    background-color:#8f8c00;
+}
+.greenBackground{
+    background-color:#0b5a00;
+}
+.grayBackground{
+    background-color:#333333;
 }
