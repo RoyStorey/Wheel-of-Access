@@ -1,4 +1,17 @@
 anychart.onDocumentLoad(function () {
+
+  let selectedData = '';
+  // document.getElementById('dataDescription').innerText = selectedData.description
+
+  // function selectData(event){
+  //   let handleClick = event => {
+  //     selectedData = event.currentTarget.id
+  //     console.log(selectedData)
+  //   }
+
+  // }
+  
+    
  
   //Declaring variables to reduce redundundancy in typing.
 let mss = accessData.missionsupportsystems;
