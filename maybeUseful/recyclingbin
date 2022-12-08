@@ -7,3 +7,8 @@
   } else if(networkVisibility = 'Owned or monitored by different agency'){
     let chartLeafColor = '#333333'
   }
+
+
+
+
+  // name: examp.name, description: examp.description, poc:examp.poc, visibility:examp.visibility, completionItems:examp.completionItems, normal: { fill: examp.color }, id: examp
