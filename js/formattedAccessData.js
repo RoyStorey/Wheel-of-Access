@@ -1,19 +1,4 @@
-anychart.onDocumentLoad(function () {
-
-  let selectedData = '';
-  // document.getElementById('dataDescription').innerText = selectedData.description
-
-  // function selectData(event){
-  //   let handleClick = event => {
-  //     selectedData = event.currentTarget.id
-  //     console.log(selectedData)
-  //   }
-
-  // }
-  
-    
- 
-  //Declaring variables to reduce redundundancy in typing.
+    //Declaring variables to reduce redundundancy in typing.
 let mss = accessData.missionsupportsystems;
 let airgap = mss.airgap;
 let directconnect = mss.directconnect;
@@ -31,12 +16,15 @@ let aircraftnetwork = accessData.aircraftnetwork;
 let mcs = aircraftnetwork.mcs;
 let avionicsbus = aircraftnetwork.avionicsbus;
 
+//Instead of hardcoding each leaf, you COULD for-loop through the json. This means that if you updated the json, then it would auto-update the anychart.
+//Do not shit where you sleep.
+
   var data = [
     {
-      name: mss.name, normal: { fill: mss.color }, children: [
+      name: mss.name, description: mss.description, visibility:mss.visibility, normal: { fill: mss.color }, children: [
         {
           name: airgap.name, children: [
-            { name: airgap.missionplanning.name },
+            { name: airgap.missionplanning.name,},
             { name: airgap.upgrademedia.name },
             { name: airgap.navaid.name }
           ]
@@ -113,38 +101,14 @@ let avionicsbus = aircraftnetwork.avionicsbus;
     },
   ]
 ;
-  // create an instance of a pie chart
-  var chart = anychart.sunburst(data, "as-tree");
-  // changes text to circular rather than radial
-  chart.labels().position("radial");
-  // changes size of leaves, balances the size of outermost leaves.
-  chart.calculationMode("ordinal-from-leaves");
-  // adjustfontsize is default, causes you to not be able to resize font
-  chart.labels().adjustFontSize(false);
-  chart.labels().wordWrap('break-word');
-  chart.level().labels().fontSize('90%');
-  chart.labels().padding(0);
-  // makes circle in middle of chart for plane me to put plane into chart.
-  chart.innerRadius(95);
-  // this is the text in the middle of the page.
-  var label = anychart.standalones.label();
-  label.text("Airplane Picture");
-  label.hAlign("center");
-  label.vAlign("middle");
-  label.width("100%");
-  label.height("100%");
-  label.fontColor("#dd2c00");
-  label.fontSize(12);
-  label.fontWeight(600);
-  chart.center().content(label)
-  // set the container element 
-  chart.container("chartTwo");
-  // initiate chart display
-  chart.draw();
-});
 
-
-
+let selectedData = mss;
+let selectedHeader = selectedData;
+let selectedDescription = selectedData.description;
+//POCs and Completion Criteria are going to be arrays, need to loop when time comes.
+let selectedPOCs = selectedData.poc;
+let selectedVisibility = selectedData.visibility;
+let selectedCompletionCriteria = selectedData.completionItems;
 
 
 // ['Mission Planning', 'Upgrade Media', 'NAVAID/Flightline Equip', 'EFB', 'Mx Laptops', 'SLN', 'CMS', 'JWICS', 'MILCOM', 'VIASAT', 'SATCOM Direct', 'EACN', 'DV Home Network', 'VIASAT', 'Network Devices', 'Host Devices', 'Personal Devices', 'Host Devices', 'Network Devices', 'ARINC']

@@ -1,0 +1,9 @@
+  if(networkVisibility = 'No visibility or monitoring'){
+    let chartLeafColor = '#790000'
+  } else if(networkVisibility = 'Partial access'){
+    let chartLeafColor = '#8f8c00'
+  } else if(networkVisibility = 'Full MDT monitoring'){
+    let chartLeafColor = '#0b5a00'
+  } else if(networkVisibility = 'Owned or monitored by different agency'){
+    let chartLeafColor = '#333333'
+  }
