@@ -12,3 +12,16 @@
 
 
   // name: examp.name, description: examp.description, poc:examp.poc, visibility:examp.visibility, completionItems:examp.completionItems, normal: { fill: examp.color }, id: examp
+
+
+  let completionItemList = document.getElementById('selectedPOCs')
+
+    while (completionItemList.firstChild){
+        completionItemList.removeChild(completionItemList.firstChild)
+    }
+    // if(e.point.getStat("poc").length)
+    for (i=0;i<e.point.getStat("poc").length;i++){
+        var li = document.createElement('li');
+        li.innerText = e.point.getStat("poc")[i];
+        completionItemList.appendChild(li);
+    }

@@ -129,14 +129,3 @@ let aircraftnetwork = accessData.aircraftnetwork;
     },
   ]
 ;
-
-let selectedData = mss;
-let selectedHeader = selectedData;
-let selectedDescription = selectedData.description;
-//POCs and Completion Criteria are going to be arrays, need to loop when time comes.
-let selectedPOCs = selectedData.poc;
-let selectedVisibility = selectedData.visibility;
-let selectedCompletionCriteria = selectedData.completionItems;
-
-
-// ['Mission Planning', 'Upgrade Media', 'NAVAID/Flightline Equip', 'EFB', 'Mx Laptops', 'SLN', 'CMS', 'JWICS', 'MILCOM', 'VIASAT', 'SATCOM Direct', 'EACN', 'DV Home Network', 'VIASAT', 'Network Devices', 'Host Devices', 'Personal Devices', 'Host Devices', 'Network Devices', 'ARINC']
