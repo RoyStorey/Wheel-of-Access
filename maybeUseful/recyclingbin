@@ -14,14 +14,38 @@
   // name: examp.name, description: examp.description, poc:examp.poc, visibility:examp.visibility, completionItems:examp.completionItems, normal: { fill: examp.color }, id: examp
 
 
-  let completionItemList = document.getElementById('selectedPOCs')
+  // let completionItemList = document.getElementById('selectedPOCs')
 
-    while (completionItemList.firstChild){
-        completionItemList.removeChild(completionItemList.firstChild)
-    }
-    // if(e.point.getStat("poc").length)
-    for (i=0;i<e.point.getStat("poc").length;i++){
-        var li = document.createElement('li');
-        li.innerText = e.point.getStat("poc")[i];
-        completionItemList.appendChild(li);
-    }
+  //   while (completionItemList.firstChild){
+  //       completionItemList.removeChild(completionItemList.firstChild)
+  //   }
+  //   // if(e.point.getStat("poc").length)
+  //   for (i=0;i<e.point.getStat("poc").length;i++){
+  //       var li = document.createElement('li');
+  //       li.innerText = e.point.getStat("poc")[i];
+  //       completionItemList.appendChild(li);
+  //   }
+
+
+    function format_value(val) {
+      //format value
+      }
+      
+      function format_level(result) {
+      for (const row in result) {
+      
+      result[row] = format_value(result[row]);
+      
+      //...get child array 
+      if (child_array.length) 
+        format_level(child_array);
+      
+      }
+      return result
+      }
+      
+      //get json
+      const result_data = format_level(data_from_json);
+      
+
+      
