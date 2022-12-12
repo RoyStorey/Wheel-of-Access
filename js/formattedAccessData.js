@@ -47,6 +47,12 @@ let aircraftnetwork = accessData.aircraftnetwork;
 //Instead of hardcoding each leaf, you COULD for-loop through the json. This means that if you updated the json, then it would auto-update the anychart.
 //Do not shit where you sleep.
 
+function formatValue(val){
+
+  let formattedValue = n
+  return formattedValue
+}
+
   var data = [
     {
       name: mss.name, description: mss.description, poc:mss.poc, visibility:mss.visibility, completionItems:mss.completionItems, normal: { fill: mss.color }, id: mss, children: [
