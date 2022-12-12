@@ -2,7 +2,7 @@ anychart.onDocumentLoad(function () {
 
 var chart = anychart.sunburst(data, "as-tree");
 
-var pocArray = [];
+// var pocArray = [];
 
 
 
@@ -46,6 +46,7 @@ chart.listen("pointClick", function(e){
  chart.labels().fontFamily("sans")
  chart.level().labels().fontSize('90%');
  chart.labels().padding(0);
+ chart.selected().fill('gray')
  // makes circle in middle of chart for plane me to put plane into chart.
  chart.innerRadius(90);
  // this is the text in the middle of the page.

@@ -1,21 +1,21 @@
 body {
-    background-color: rgb(19, 19, 22);
-    min-height: 100vh;
+    background-color: rgb(3, 3, 3);
+    height: 100vh;
     margin: 0px;
     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 .pageContainer{
     /* height: 100vh; */
-    width: 200%;
+    /* width: 200%; */
     /* transition-duration: .8s; */
     display: flex;
     flex-direction: row;
-    color:white;
+    color:rgba(255, 255, 255, 0.829);
     justify-content:space-around;
     /* background-color:rgb(0, 61, 61); */
 }
 .pageContainer h1,h2{
-    color:rgb(211, 255, 161);
+    color:rgba(255, 255, 255, 0.938);
     font-weight:300;
 }
 .chartContainer{
@@ -23,6 +23,7 @@ body {
     width:50%;
     display:flex;
     align-items:center;
+    background-color:rgb(16, 16, 20);
 }
 .chartTwo {
     height: 90%;
@@ -43,36 +44,15 @@ body {
 .legendContainer h5{
     margin:0px;
     padding:0px;
+    font-size:1.4vh;
 }
 .descriptionContainer{
     width:50%;
-    /* background-color:gray; */
-    /* text-indent:2rem; */
     padding:4rem;
-}
-
-.POCandVisibilityContainer{
-    display:flex;
-    flex-direction:row;
-    /* justify-content:space-around; */
-}
-.columnize{
+    background-color:#101014;
     display:flex;
     flex-direction:column;
-}
-.rowize{
-    display:flex;
-    flex-direction:row;
-    /* justify-content: space-between; */
-}
-.padding{
-    padding:1rem;
-}
-.bold{
-    font-weight:500;
-}
-.underline{
-    text-decoration: underline;
+    justify-content:space-between
 }
 .legendColorContainer{
     border-width:1px;
@@ -82,18 +62,68 @@ body {
     height:15px;
     width:15px;
 }
+.POCandVisibilityContainer{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+    margin-bottom:2rem;
+}
+.POCandVisibilityCell{
+    display:flex;
+    flex-direction:column; 
+    border-right:1px solid rgba(255, 255, 255, 0.09);
+    padding-left:1rem;
+    padding-right:1rem;
+}
+.columnize{
+    display:flex;
+    flex-direction:column;
+}
+.rowize{
+    display:flex;
+    flex-direction:row;
+}
+.paddingHoriz{
+    padding-left:2rem;
+    padding-right:2rem;
+}
+.bold{
+    font-weight:500;
+}
+.underline{
+    text-decoration: underline;
+}
+.grayBorderRight{
+    border-right:1px solid rgba(255, 255, 255, 0.09)
+}
+.grayBorderBottom{
+    border-bottom:1px solid rgba(255, 255, 255, 0.09)
+}
 .redBackground{
 background-color:#790000;
 }
 .yellowBackground{
-    background-color:#8f8c00;
+    background-color:#8f7a00;
 }
 .greenBackground{
     background-color:#0b5a00;
 }
 .grayBackground{
-    background-color:#333333;
+    background-color:#292932;
 }
 .purpleBackground{
     background-color:#270041;
+}
+#selectedDescription{
+    text-indent: 2rem;
+}
+.grayTextBackground{
+    background-color:rgb(24,24,28);
+    border-radius:3px;
+    border: 1px solid rgba(255,255,255,0.09);
+}
+.lightGrayTextBackground{
+    background-color:rgba(255, 255, 255, 0.068);
+    border-radius:3px;
+    border: 1px solid rgba(255,255,255,0.09);
 }
