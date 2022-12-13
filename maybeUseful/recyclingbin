@@ -48,4 +48,10 @@
       const result_data = format_level(data_from_json);
       
 
-      
+
+    // I think this would need to be in the for loop;
+    // something like "for each network, if network.visibility == visFull, then change the color "
+let visFull = 'Full MDT monitoring';
+let visPartial = 'Partial Access';
+let visNone = 'No visibility of monitoring';
+let visOther = 'Owned or monitored by different agency'
