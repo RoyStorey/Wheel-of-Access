@@ -1,6 +1,6 @@
 anychart.onDocumentLoad(function () {
 
-var chart = anychart.sunburst(data, "as-tree");
+var chart = anychart.sunburst(accessData, "as-tree");
 
 // var pocArray = [];
 

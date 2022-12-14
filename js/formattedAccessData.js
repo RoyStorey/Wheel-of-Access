@@ -54,39 +54,31 @@
 
 // We straight up massaging data out here.
 
-const accessDataArray = Object.values(accessData);
+// let formattedVals = [];
+// var data = accessData;
 
-let rootObjects = [];
-let branchObjects = [];
-let leafObjects = [];
-var data = [];
-let formattedVals = [];
+// function formatLevel(formattedVals){
+//   for(const formattedVal in formattedVals){
 
-function formatLevel(formattedVals){
-  for(const formattedVal in formattedVals){
+//   }
+// }
+// //formats object (val) in uniform object format that anychart uses
+// function formatObject(val){
+//   let formattedObject = {name: val.name, description: val.description, poc:val.poc, visibility:val.visibility, completionItems:val.completionItems, normal: { fill: val.color }, id: val,children:[]};
+//   return formattedObject;
+// }
+// // formats root objects and pushes to formattedVals
+// for(let i = 0; i < accessData.length; i++){
+//   if(accessData[i].hasOwnProperty('children')){
+//     let objectChild = accessData[i].children
+//   }
+//   console.log(accessData[i])
+//   formattedVals.push(formatObject(accessData[i]))
+// }
 
-  }
-}
-
-//formats object (val) in uniform object format that anychart uses
-function formatObject(val){
-  let formattedObject = {name: val.name, description: val.description, poc:val.poc, visibility:val.visibility, completionItems:val.completionItems, normal: { fill: val.color }, id: val};
-  return formattedObject;
-}
-
-
-//formats root objects and pushes to data
-for(let i = 0; i < accessDataArray.length; i++){
-  if(typeof(accessDataArray[i]) === 'object'){
-    rootObjects.push(accessDataArray[i])
-    formattedVals.push(formatObject(rootObjects[i]))
-  }
-}
-console.log(accessData)
-console.log(accessData.transport)
-console.log(accessData.missionsupportsystems.children[0].airgap.children)
-console.log(accessData.transport.children[2])
-
+// console.log(accessData)
+// console.log(data)
+// console.log(formattedVals)
 //   var data2 = [
 //     {
 //       name: mss.name, description: mss.description, poc:mss.poc, visibility:mss.visibility, completionItems:mss.completionItems, normal: { fill: mss.color }, id: mss, children: [
