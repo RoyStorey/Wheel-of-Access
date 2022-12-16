@@ -36,32 +36,32 @@ chart.listen("pointClick", function(e){
     }
 });
 
- // changes text to circular rather than radial
- chart.labels().position("radial");
- // changes size of leaves, balances the size of outermost leaves.
- chart.calculationMode("ordinal-from-leaves");
- // adjustfontsize is default, causes you to not be able to resize font
- chart.labels().adjustFontSize(false);
- chart.labels().wordWrap('break-word');
- chart.labels().fontFamily("sans")
- chart.level().labels().fontSize('90%');
- chart.labels().padding(0);
- chart.selected().fill('gray')
- // makes circle in middle of chart for plane me to put plane into chart.
- chart.innerRadius(90);
- // this is the text in the middle of the page.
- var background = anychart.standalones.background();
-    background.fill({
-        src: 'images/af1.jpg',
-    })
- background.minWidth("140%");
- background.minHeight("140%");
- background.top('-20%')
- background.left('-20%')
- chart.center().content(background)
- // set the container element 
- chart.container("chartTwo");
- // initiate chart display
- chart.draw();
+// changes text to circular rather than radial
+chart.labels().position("radial");
+// changes size of leaves, balances the size of outermost leaves.
+chart.calculationMode("ordinal-from-leaves");
+// adjustfontsize is default, causes you to not be able to resize font
+chart.labels().adjustFontSize(false);
+chart.labels().wordWrap('break-word');
+chart.labels().fontFamily("sans")
+chart.level().labels().fontSize('90%');
+chart.labels().padding(0);
+chart.selected().fill('gray')
+// makes circle in middle of chart for plane me to put plane into chart.
+chart.innerRadius(90);
+// this is the text in the middle of the page.
+var background = anychart.standalones.background();
+background.fill({
+    src: 'images/af1.jpg',
+})
+background.minWidth("140%");
+background.minHeight("140%");
+background.top('-20%')
+background.left('-20%')
+chart.center().content(background)
+// set the container element 
+chart.container("chartTwo");
+// initiate chart display
+chart.draw();
 ;
 })

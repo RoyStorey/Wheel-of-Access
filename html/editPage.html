@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/editStyles.css">
+    <title>Wheel of Access</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/js/anychartRequiredTwo.js" type="text/javascript"></script>
+    <script src="/js/anychartRequired.js"></script>
+    <script src="/js/htmlFunctions.js"></script>
+    <script src="/json/accessData.js"></script>
+    <link rel="icon" type="image/x-icon" href="/images/haas.png">
+</head>
+
+<body>
+    <div class="pageContainer">
+        <div class="leftContainer">
+            <div class="rowize lightGrayTextBackground">
+                <h1 style="text-indent:2rem;">Currently editing:</h1>
+                <h1 id="editNetworkName">No Network Selected</h1>
+            </div>
+            <form action="" id="editForm">
+                <div class="editCell">
+                    <label>NAME:</label>
+                    <textarea id="jsonName" name="name"></textarea>
+                </div>
+                <div class="editCell">
+                    <label>DESCRIPTION:</label>
+                    <textarea id="jsonDescription" name="description"></textarea>
+                </div>
+                <div class="editCell">
+                    <label>POCs:</label>
+                    <textarea id="jsonPOC" name="poc"></textarea>
+                </div>
+                <div class="editCell">
+                    <label>COMPLETION ITEMS:</label>
+                    <textarea id="jsonCompletionItems" name="completionItems"></textarea>
+                </div>
+                <div class="editCell">
+                    <label>VISIBILITY:</label>
+                    <textarea id="jsonVisibility" name="visibility"></textarea>
+                </div>
+                <div class="rowize buttonContainer">
+                    <input type="submit" value="Preview Changes">
+                    <input type="submit" value="Save Changes">
+                </div>
+            </form>
+
+            <div class="leftBottomContainer">
+                <div>
+                    <h2 style="text-indent:0rem;">Preview Description:</h2>
+                    <p id="previewDescription"></p>       
+                </div>
+                <div class="POCandVisibilityContainer">
+                    <div class="POCandVisibilityCell" style="padding-left:0px">
+                        <h1>Point of Contact:</h1>
+                        <ul id="previewPOC"></ul>
+                    </div>
+                    <div class="POCandVisibilityCell">
+                        <h1>Visibility:</h1>
+                        <p id="previewVisibility">No visibility or monitoring</p>
+                    </div>
+                    <div class="POCandVisibilityCell" style="border-right:0px">
+                        <h1>Completion Criteria:</h1>
+                        <ul id="previewCompletionItems">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="rightContainer">
+            <textarea id="formattedForm"></textarea>
+            <div class="editChart grayBorderBottom" id="chart"></div>
+        </div>
+    </div>
+    <a href="/index.html"><p>Home</p></a>
+
+    <script src="/js/editPage.js"></script>
+</body>

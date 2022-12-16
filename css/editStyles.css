@@ -1,0 +1,75 @@
+body{
+    background-color: var(--darkGray);
+    color:var(--whiteText)
+    
+}
+.leftContainer textarea{
+    width:100%;
+    height:100%;
+    display:flex;
+    margin-left:2rem;
+    background-color:var(--lightGray);
+    border:var(--whiteBorder);
+    color:var(--whiteText);
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    height:100%;
+}
+.rightContainer textArea{
+    background-color:var(--gray);
+    color:var(--whiteText);
+    width:95%;
+    font-size:1.1rem;
+    height:18%;
+    border:var(--whiteBorder);
+    margin-top:2rem;
+}
+.pageContainer{
+    display:flex;
+    justify-content:space-between;
+}
+.leftContainer{
+    width:45%;
+    height:95vh;
+    display:flex;
+    background-color:var(--gray);
+    padding:2rem;
+    flex-direction:column;
+    border-right:var(--whiteBorder);
+    justify-content: space-around;
+}
+.editCell{
+    display:flex;
+    flex-direction:row;
+    width:100%;
+    height:10%;
+    align-items:center;
+    margin-top:2rem
+}
+#editNetworkName{
+    text-indent: 2rem;
+    text-decoration: underline;
+}
+.rightContainer{
+    width:50%;
+    height:100vh;
+    /* background-color:salmon */
+}
+input{
+    margin-top:2rem;
+}
+.leftContainer form{
+    height:50%;
+    border-bottom:var(--whiteBorder);
+}
+.editChart{
+    height:80%
+}
+.leftBottomContainer{
+    /* background-color:salmon; */
+    height:30%;
+}
+.buttonContainer{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+}
